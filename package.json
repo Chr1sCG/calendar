@@ -1,0 +1,28 @@
+{
+  "name": "dates-app",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start-pm2": "pm2 start -f --watch --name=\"dates-app\" index.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "~4.16.0",
+    "express-async-wrap": "^1.0.0",
+    "got": "^11.8.3",
+    "lodash": "^4.17.21",
+    "morgan": "~1.9.0",
+    "uuid-by-string": "^3.0.5",
+    "spacetime": "^7.4.2",
+    "luxon": "3.3.0",
+    "iso-639-1": "^2.1.15"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "supertest": "^3.0.0"
+  }
+}

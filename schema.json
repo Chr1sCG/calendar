@@ -1,0 +1,43 @@
+{
+    "period": {
+        "id": {
+            "name": "Id",
+            "type": "id"
+        },
+        "name": {
+            "name": "Name",
+            "type": "text"
+        },
+        "dates": {
+            "name": "Dates",
+            "type": "text",
+            "subType": "date-range"
+        },
+        "type": {
+            "name": "Type",
+            "type": "text",
+            "subType": "single-select"
+        },
+        "number": {
+            "name": "Number",
+            "type": "number",
+            "subType": "integer"
+        },
+        "relative": {
+            "name": "Relative",
+            "type": "number",
+            "subType": "integer"
+        },
+        "is_in": {
+            "name": "Is in ",
+            "type": "text",
+            "relation": {
+                "cardinality": "many-to-many",
+                "name": "Is in",
+                "targetName": "Contains",
+                "targetType": "period",
+                "targetFieldId": "id"
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "types": [
+    {
+      "id": "period",
+      "name": "Period"
+    }   
+  ],
+  "filters": [
+    {
+      "id": "types",
+      "title": "Types to sync (default: all)",
+      "datalist": true,
+      "optional": true,
+      "type": "multidropdown"
+    },
+    {
+      "id": "timezone",
+      "title": "Timezone (default: UTC)",
+      "datalist": true,
+      "optional": true,
+      "type": "list"
+    },
+    {
+      "id": "language",
+      "title": "Language (default: English)",
+      "datalist": true,
+      "optional": true,
+      "type": "list"
+    },
+    {
+      "id": "from",
+      "type": "number",
+      "title": "Start Year (default: current year)",
+      "optional": true
+    },
+    {
+      "id": "to",
+      "type": "number",
+      "title": "End Year (default: current year)",
+      "optional": true
+    }
+
+  ]
+}

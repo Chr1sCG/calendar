@@ -1,0 +1,18 @@
+{
+  "id": "period-app",
+  "name": "Period",
+  "version": "1.0.0",
+  "description": "Use date periods with more granularity",
+  "authentication": [
+    {
+      "id": "public",
+      "name": "Public Access",
+      "description": "There is no any authentication required",
+      "fields": []
+    }
+  ],
+  "sources": [],
+  "responsibleFor": {
+    "dataSynchronization": true
+  }
+}
