@@ -286,7 +286,7 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                     let findType = composeTypes.shift();
                     if (type == findType) {
                         let matchType = composeTypes[0];
-                        let intervalMid = (interval.divideEqually(2))[0].end;
+                        let intervalMid = (i.divideEqually(2))[0].end;
                         item.compose = uuid(JSON.stringify(Interval.fromDateTimes(intervalMid.startOf(matchType), intervalMid.endOf(matchType)).toFormat('yyyy/MM/dd')));
                     }
                 }
