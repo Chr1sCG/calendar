@@ -1,10 +1,9 @@
 {
-  "id": "period-app",
-  "name": "Period",
+  "id": "calendar-app",
+  "name": "Calendar",
   "version": "1.0.0",
   "description": "Use date periods with more granularity",
-  "authentication": [
-  ],
+  "authentication": [],
   "sources": [],
   "responsibleFor": {
     "dataSynchronization": true
