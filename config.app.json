@@ -3,6 +3,7 @@
   "name": "Calendar",
   "version": "1.0.0",
   "description": "Use date periods with more granularity",
+  "authentication": [],
   "sources": [],
   "responsibleFor": {
     "dataSynchronization": true
