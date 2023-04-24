@@ -169,11 +169,13 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
             zone: timezone
         });
 
+        let choices = [];
+        
         if (types === undefined) {
-            let choices = ["Day", "Week", "Month", "Quarter", "Year"];
+            choices = ["Day", "Week", "Month", "Quarter", "Year"];
         }
         else {
-            let choices = customSort(types);
+            choices = customSort(types);
         }
 
         let items = []
