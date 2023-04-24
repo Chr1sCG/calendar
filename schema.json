@@ -38,6 +38,17 @@
                 "targetType": "period",
                 "targetFieldId": "id"
             }
+        },
+        "compose": {
+            "name": "Compose ",
+            "type": "text",
+            "relation": {
+                "cardinality": "many-to-one",
+                "name": "Compose",
+                "targetName": "Comprises",
+                "targetType": "period",
+                "targetFieldId": "id"
+            }
         }
     }
 }
