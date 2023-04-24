@@ -275,6 +275,17 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 if (matchingTypes.length > 0) {
                     item.is_in = isInType(matchingTypes, isIn, i);
                 }
+                
+                let composeTypes = [...choices];
+                
+                while (composeTypes.length > 1) {
+                    let findType = composeTypes.shift();
+                    if (type == findType) {
+                        let matchType = composeTypes[0];
+                        let intervalMid = (interval.divideEqually(2))[0].end;
+                        item.compose = uuid(JSON.stringify(Interval.fromDateTimes(intervalMid.startOf(matchType), intervalMid.endOf(matchType)).toFormat('yyyy/MM/dd')));
+                    }
+                }
 
                 item.id = uuid(JSON.stringify(i.toFormat('yyyy/MM/dd')));
                 //item.previous = prevID;
