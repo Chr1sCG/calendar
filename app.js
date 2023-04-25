@@ -283,13 +283,10 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
 
                 let matchingTypes = [...choices];
                 matchingTypes.shift();
-
                 let isIn = []
-
                 if (matchingTypes.length > 0) {
                     item.is_in = isInType(matchingTypes, isIn, i);
                 }
-                
                 let composeTypes = [...choices];
                 
                 while (composeTypes.length > 1) {
@@ -297,14 +294,14 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                     if (type == findType) {
                         let matchType = composeTypes[0];
                         let intervalMid = (i.divideEqually(2))[0].end;
-                        item.compose = uuid(JSON.stringify(Interval.fromDateTimes(intervalMid.startOf(matchType), intervalMid.endOf(matchType)).toFormat('yyyy/MM/dd')));
+                        item.part_of = uuid(JSON.stringify(Interval.fromDateTimes(intervalMid.startOf(matchType), intervalMid.endOf(matchType)).toFormat('yyyy/MM/dd')));
                     }
                 }
 
                 item.id = uuid(JSON.stringify(i.toFormat('yyyy/MM/dd')));
+                
                 //item.previous = prevID;
                 //prevID = item.id
-
                 //item.scratch = d.locale;
                 //item.scratch1 = choices.map((t) => t.order);
                 //item.scratch2 = choices;
