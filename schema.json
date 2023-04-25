@@ -28,6 +28,10 @@
             "type": "number",
             "subType": "integer"
         },
+        "dotw": {
+            "name": "Day of the week",
+            "type": "text"
+        },
         "is_in": {
             "name": "Is in ",
             "type": "text",
@@ -49,10 +53,6 @@
                 "targetType": "period",
                 "targetFieldId": "id"
             }
-        },
-        "scratch": {
-            "name": "Scratch",
-            "type": "text"
         }
     }
 }
