@@ -86,13 +86,21 @@ app.post(`/api/v1/synchronizer/datalist`, wrap(async (req, res) => {
             items
         });
     }
-    if (field == 'language') {
+    if (field == 'locale') {
         const ISO6391 = require('iso-639-1');
+        const codes = require('iso-lang-codes');
+        
+        /*
         const names = ISO6391.getAllNativeNames();
         const items = names.map((l) => ({
             title: l,
             value: ISO6391.getCode(l)
         }))
+        */  
+        
+        let locales = codes.locales()
+        let localeNames = Object.keys(locales)
+        const items = localeNames.map((l) => ({"name":ISO6391.getNativeName(l.substring(0,2)) + " (" + l + ")","value":l}))
 
         res.json({
             items
@@ -144,14 +152,14 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
     }
     const {
         timezone,
-        language,
+        locale,
         types
     } = filter;
     const yearRange = getYearRange(filter);
 
     if (requestedType == `period`) {
 
-        const lang = language
+        const lang = locale
         const start = yearRange[0] + '/01/01'
         const end = yearRange[1] + '/12/31'
 
@@ -226,11 +234,11 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 switch (type) {
                     case 'Day':
                         item.number = d.ordinal
-                        item.name = d.toFormat('yyyy/MM/dd')
+                        item.name = d.toLocaleString()
                         break
                     case 'Week':
                         item.number = d.weekNumber
-                        item.name = d.weekYear + "W" + d.weekNumber.toString().padStart(2, '0')
+                        item.name = d.weekYear + "-W" + d.weekNumber.toString().padStart(2, '0')
                         break
                     case 'Month':
                         item.number = d.month
