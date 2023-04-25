@@ -100,7 +100,7 @@ app.post(`/api/v1/synchronizer/datalist`, wrap(async (req, res) => {
         
         let locales = codes.locales()
         let localeNames = Object.keys(locales)
-        const items = localeNames.map((l) => ({"name":ISO6391.getNativeName(l.substring(0,2)) + " (" + l + ")","value":l}))
+        const items = localeNames.map((l) => ({"title":ISO6391.getNativeName(l.substring(0,2)) + " (" + l + ")","value":l}))
 
         res.json({
             items
