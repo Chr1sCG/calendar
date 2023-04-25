@@ -21,8 +21,8 @@
       "type": "list"
     },
     {
-      "id": "language",
-      "title": "Language (default: English)",
+      "id": "locale",
+      "title": "Locale (default: English)",
       "datalist": true,
       "optional": true,
       "type": "list"
