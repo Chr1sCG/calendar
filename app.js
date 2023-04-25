@@ -299,7 +299,7 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 //item.previous = prevID;
                 //prevID = item.id
 
-                item.scratch = lang;
+                item.scratch = d.locale();
                 //item.scratch1 = choices.map((t) => t.order);
                 //item.scratch2 = choices;
 
