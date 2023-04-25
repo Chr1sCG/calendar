@@ -53,6 +53,6 @@
         "scratch": {
             "name": "Scratch",
             "type": "text"
-        },
+        }
     }
 }
