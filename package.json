@@ -19,7 +19,8 @@
     "uuid-by-string": "^3.0.5",
     "spacetime": "^7.4.2",
     "luxon": "3.3.0",
-    "iso-639-1": "^2.1.15"
+    "iso-639-1": "^2.1.15",
+    "iso-lang-codes": "2.1.1"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
