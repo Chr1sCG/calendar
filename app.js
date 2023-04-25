@@ -236,7 +236,7 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                     case 'Day':
                         item.number = d.ordinal
                         item.name = d.toLocaleString()
-                        item.dayOfTheWeek = d.weekdayLong
+                        item.dotw = d.weekdayLong
                         break
                     case 'Week':
                         item.number = d.weekNumber
