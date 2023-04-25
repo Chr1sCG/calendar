@@ -236,18 +236,19 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                     case 'Day':
                         item.number = d.ordinal
                         item.name = d.toLocaleString()
+                        item.dayOfTheWeek = d.weekdayLong
                         break
                     case 'Week':
                         item.number = d.weekNumber
-                        item.name = d.weekYear + "-W" + d.weekNumber.toString().padStart(2, '0')
+                        item.name = d.weekYear.toString() + "-W" + d.weekNumber.toString().padStart(2, '0')
                         break
                     case 'Month':
                         item.number = d.month
-                        item.name = d.toFormat('yyyy/MM') + " " + d.monthShort
+                        item.name = d.monthShort + " " + d.year.toString()
                         break
                     case 'Quarter':
                         item.number = d.quarter
-                        item.name = d.year + "Q" + d.quarter
+                        item.name = d.year + "-Q" + d.quarter
                         break
                     case 'Year':
                         item.number = d.year
@@ -304,7 +305,7 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 //item.previous = prevID;
                 //prevID = item.id
 
-                item.scratch = d.locale;
+                //item.scratch = d.locale;
                 //item.scratch1 = choices.map((t) => t.order);
                 //item.scratch2 = choices;
 
