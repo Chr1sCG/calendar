@@ -38,18 +38,18 @@
             "relation": {
                 "cardinality": "many-to-many",
                 "name": "Is in",
-                "targetName": "Contains",
+                "targetName": "Comprises",
                 "targetType": "period",
                 "targetFieldId": "id"
             }
         },
-        "compose": {
-            "name": "Compose ",
+        "part_of": {
+            "name": "Part of ",
             "type": "text",
             "relation": {
                 "cardinality": "many-to-one",
-                "name": "Compose",
-                "targetName": "Comprises",
+                "name": "Part of",
+                "targetName": "Includes",
                 "targetType": "period",
                 "targetFieldId": "id"
             }
