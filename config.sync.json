@@ -22,7 +22,7 @@
     },
     {
       "id": "locale",
-      "title": "Locale (default: English)",
+      "title": "Locale (default: en-US)",
       "datalist": true,
       "optional": true,
       "type": "list"
@@ -34,9 +34,9 @@
       "optional": true
     },
     {
-      "id": "to",
+      "id": "numYears",
       "type": "number",
-      "title": "End Year (if >= Start Year) or Offset (if < Start Year) (default: current year)",
+      "title": "Number of years (default: 1)",
       "optional": true
     }
 
