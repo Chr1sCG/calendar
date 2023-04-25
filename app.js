@@ -19,7 +19,7 @@ const getYearRange = filter => {
     if (_.isNaN(fromYear)) {
         fromYear = new Date().getFullYear();
     }    
-    if (numYears < 1) {numYears = 1}
+    if (numYears < 1 || numYears == undefined) {numYears = 1}
     
     const yearRange = [];
     
@@ -299,7 +299,7 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 //item.previous = prevID;
                 //prevID = item.id
 
-                item.scratch = d.locale();
+                item.scratch = d.locale;
                 //item.scratch1 = choices.map((t) => t.order);
                 //item.scratch2 = choices;
 
