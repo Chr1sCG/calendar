@@ -28,7 +28,7 @@ const getYearRange = filter => {
         yearRange.push(toYear);
     } else {
         yearRange.push(fromYear);
-        yearRange.push(fromYear);
+        yearRange.push(fromYear + toYear);
     }
     return yearRange;
 };
