@@ -14,22 +14,18 @@ const ISO6391 = require('iso-639-1');
 
 const getYearRange = filter => {
     let fromYear = parseInt(filter.from);
-    let toYear = parseInt(filter.to);
+    let numYears = parseInt(filter.numYears);
 
     if (_.isNaN(fromYear)) {
         fromYear = new Date().getFullYear();
-    }
-    if (_.isNaN(toYear)) {
-        toYear = new Date().getFullYear();
-    }
+    }    
+    if (numYears < 1) {numYears = 1}
+    
     const yearRange = [];
-    if (fromYear <= toYear) {
-        yearRange.push(fromYear);
-        yearRange.push(toYear);
-    } else {
-        yearRange.push(fromYear);
-        yearRange.push(fromYear + toYear);
-    }
+    
+    yearRange.push(fromYear);
+    yearRange.push(fromYear + numYears - 1);
+
     return yearRange;
 };
 
