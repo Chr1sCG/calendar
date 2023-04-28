@@ -12,7 +12,7 @@
             "name": "Dates",
             "type": "text",
             "subType": "date-range",
-            "order": 1
+            "order": 2
         },
         "type": {
             "name": "Type",
@@ -24,21 +24,25 @@
                 { "name":"Month" },
                 { "name":"Quarter" },
                 { "name":"Year" }
-            ]
+            ],
+            "order": 1
         },
         "number": {
             "name": "Number",
             "type": "number",
-            "subType": "integer"
+            "subType": "integer",
+            "order": 3
         },
         "relative": {
             "name": "Relative",
             "type": "number",
-            "subType": "integer"
+            "subType": "integer",
+            "order": 4
         },
         "dotw": {
             "name": "Day of the week",
-            "type": "text"
+            "type": "text",
+            "order": 6
         },
         "is_in": {
             "name": "Is in ",
@@ -49,7 +53,8 @@
                 "targetName": "Comprises",
                 "targetType": "period",
                 "targetFieldId": "id"
-            }
+            },
+            "order": 5
         },
         "part_of": {
             "name": "Part of ",
@@ -60,7 +65,8 @@
                 "targetName": "Includes",
                 "targetType": "period",
                 "targetFieldId": "id"
-            }
+            },
+            "order": 4
         }
     }
 }
