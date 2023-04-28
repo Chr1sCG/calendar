@@ -206,6 +206,8 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                     delta = diff.length(types);
                 }
                 
+                item.relative = delta;
+                
                 /*
                 let relativeStr = d.toRelative({
                     base: startOfThis,
