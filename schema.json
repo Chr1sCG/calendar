@@ -24,7 +24,7 @@
                 { "name":"Quarter" },
                 { "name":"Year" }
             ],
-            "order": 1
+            "order": "1"
         },
         "number": {
             "name": "Number",
