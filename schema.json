@@ -52,10 +52,9 @@
                 "name": "Is in",
                 "targetName": "Comprises",
                 "targetType": "period",
-                "targetFieldId": "id",
-                "order": 8
+                "targetFieldId": "id"
             },
-            "order": 7
+            "order": 6
         },
         "part_of": {
             "name": "Part of ",
@@ -65,8 +64,7 @@
                 "name": "Part of",
                 "targetName": "Includes",
                 "targetType": "period",
-                "targetFieldId": "id",
-                "order": 6
+                "targetFieldId": "id"
             },
             "order": 5
         }
