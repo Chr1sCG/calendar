@@ -38,7 +38,7 @@ const appConfig = require(`./config.app.json`);
 app.get(`/`, (req, res) => res.json(appConfig));
 
 app.post(`/validate`, (req, res) => res.json({
-    name: `Public`
+    name: `none`
 }));
 
 const syncConfig = require(`./config.sync.json`);
