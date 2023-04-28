@@ -23,8 +23,7 @@
                 { "name":"Month" },
                 { "name":"Quarter" },
                 { "name":"Year" }
-            ],
-            "order": "1"
+            ]
         },
         "number": {
             "name": "Number",
