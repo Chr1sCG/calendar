@@ -11,7 +11,8 @@
         "dates": {
             "name": "Dates",
             "type": "text",
-            "subType": "date-range"
+            "subType": "date-range",
+            "order": 1
         },
         "type": {
             "name": "Type",
