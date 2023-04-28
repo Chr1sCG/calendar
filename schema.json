@@ -42,7 +42,7 @@
         "dotw": {
             "name": "Day of the week",
             "type": "text",
-            "order": 6
+            "order": 7
         },
         "is_in": {
             "name": "Is in ",
@@ -54,7 +54,7 @@
                 "targetType": "period",
                 "targetFieldId": "id"
             },
-            "order": 5
+            "order": 6
         },
         "part_of": {
             "name": "Part of ",
@@ -66,7 +66,7 @@
                 "targetType": "period",
                 "targetFieldId": "id"
             },
-            "order": 4
+            "order": 5
         }
     }
 }
