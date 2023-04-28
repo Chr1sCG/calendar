@@ -5,7 +5,7 @@
   "description": "Use date periods with more granularity",
   "authentication": [
     {
-      "id": "none",
+      "id": "public",
       "name": "Public Access",
       "description": "There is no any authentication required",
       "fields": []
