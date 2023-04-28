@@ -195,6 +195,18 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 };
                 item.dates = JSON.stringify(dates);
 
+                let delta = 0;
+                
+                if (startOfThis > d) { // in the past
+                    const diff = Interval.fromDateTimes(d,startOfThis);
+                    delta = 0-diff.length(types);
+                }
+                else {
+                    const diff = Interval.fromDateTimes(startOfThis,d);
+                    delta = diff.length(types);
+                }
+                
+                /*
                 let relativeStr = d.toRelative({
                     base: startOfThis,
                     unit: types
@@ -206,6 +218,8 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
                 } else {
                     item.relative = delta
                 };
+                */             
+                
                 let semanticStr = d.toRelativeCalendar({
                     base: startOfThis,
                     unit: types
