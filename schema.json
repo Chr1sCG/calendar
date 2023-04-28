@@ -11,8 +11,7 @@
         "dates": {
             "name": "Dates",
             "type": "text",
-            "subType": "date-range",
-            "order": 2
+            "subType": "date-range"
         },
         "type": {
             "name": "Type",
@@ -30,19 +29,16 @@
         "number": {
             "name": "Number",
             "type": "number",
-            "subType": "integer",
-            "order": 3
+            "subType": "integer"
         },
         "relative": {
             "name": "Relative",
             "type": "number",
-            "subType": "integer",
-            "order": 4
+            "subType": "integer"
         },
         "dotw": {
             "name": "Day of the week",
-            "type": "text",
-            "order": 7
+            "type": "text"
         },
         "is_in": {
             "name": "Is in ",
@@ -53,8 +49,7 @@
                 "targetName": "Comprises",
                 "targetType": "period",
                 "targetFieldId": "id"
-            },
-            "order": 6
+            }
         },
         "part_of": {
             "name": "Part of ",
@@ -65,8 +60,7 @@
                 "targetName": "Includes",
                 "targetType": "period",
                 "targetFieldId": "id",
-            },
-            "order": 5
+            }
         }
     }
 }
