@@ -52,7 +52,8 @@
                 "name": "Is in",
                 "targetName": "Comprises",
                 "targetType": "period",
-                "targetFieldId": "id"
+                "targetFieldId": "id",
+                "order": 8
             },
             "order": 7
         },
