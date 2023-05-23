@@ -42,6 +42,7 @@
         "dotw": {
             "name": "Day of the week",
             "type": "text",
+            "subType": "single-select",
             "order": 9
         },
         "is_in": {
