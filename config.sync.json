@@ -8,7 +8,7 @@
   "filters": [
     {
       "id": "types",
-      "title": "Types to sync (default: all)",
+      "title": "Period types to sync (default: all)",
       "datalist": true,
       "optional": true,
       "type": "multidropdown"
