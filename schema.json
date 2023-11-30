@@ -18,13 +18,6 @@
             "name": "Type",
             "type": "text",
             "subType": "single-select",
-            "options": [
-                { "name":"Day" },
-                { "name":"Week" },
-                { "name":"Month" },
-                { "name":"Quarter" },
-                { "name":"Year" }
-            ],
             "order": 1
         },
         "number": {
